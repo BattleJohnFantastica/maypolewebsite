@@ -1,0 +1,16 @@
+.form-container
+  = form_for :maypole do |f|
+    %p.form-group
+      = f.label :name
+      %br/
+      = f.text_field :name
+    %p
+      = f.label :email
+      %br/
+      = f.text_field :email
+    %p{:style => "margin: 20px 0 10px 0"}
+      = f.label :message
+      %br/
+      = f.text_area :message, class: "form-control", style: "height: 10em; padding: 10px"
+    %p.col-sm-2.sub-btn-holder{:style => "text-align: center"}
+      = f.submit 'Submit', class: "btn sub-btn"

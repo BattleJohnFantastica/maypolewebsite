@@ -1,0 +1,2 @@
+class Maypole < ApplicationRecord
+end

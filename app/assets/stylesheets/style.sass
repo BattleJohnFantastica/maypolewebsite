@@ -1,0 +1,340 @@
+$bc: #fcfcfc
+$ic: rgb(3, 9, 76)
+$bottomc: rgb(3, 9, 76)
+$topbarc: rgb(3, 9, 76)
+$topfont: #fcfcfc
+$bottomfont: #fcfcfc
+$belt2: #fcfcfc
+$belt2font: rgb(3, 9, 76)
+body
+  margin: 0
+  min-width: 600px
+  font-family: "Ubuntu", sans-serif
+  background-color: $bc
+  font-color: dimgrey
+
+.belt
+  display: table
+  width: 100%
+  height: 60px
+  .first
+    background-color: $topbarc
+    min-width: 150px
+    width: 10%
+  .second
+    min-width: 300px
+  .third
+    background-color: $topbarc
+    min-width: 150px
+  .logo
+    background-color: $topbarc
+    height: 35px
+    width: 50px
+    margin: 0 auto
+    background-image: url("http://maypolefilm.co.uk/css/img/footer-logo.png")
+    background-size: contain
+    background-repeat: no-repeat
+.belt-cell
+  display: table-cell
+  background-color: $topbarc
+
+.belt2
+  min-width: 600px
+  width: 100%
+  height: 50px
+  position: relative 
+  overflow: hidden
+  background-color: $belt2
+  color: $belt2font
+  box-shadow: 0px 1px 12px 0px lightgrey
+  .second
+    min-width: 250px
+    background-color: $belt2
+    width: 70%
+    vertical-align: top
+  .third
+    background-color: $belt2
+    display: inline-block
+    width: 29%
+    vertical-align: top
+  .belt-cell
+    background-color: $belt2
+    display: inline-block
+    height: 50px
+.carousel-holder
+  width: 100%
+  min-width: 600px
+  background-color: pink
+  height: 100px
+  max-width: 1500px
+  margin: 0 auto
+
+img
+  height: 300px
+  width: 100%
+  max-width: 1500px
+  object-fit: cover
+
+.swat
+  font-size: 2em
+  border-radius: 10px
+  background-color: rgba(135, 135, 135, 0.2)
+  color: white
+  transition: 0.25s ease-in-out
+  -moz-transition: 0.25s ease-in-out
+  -webkit-transition: 0.25s ease-in-out
+  margin: 10px
+  transform: translateZ(10px)
+  cursor: pointer
+
+.ar
+  width: 100%
+  background-color: rgba(135, 135, 135, 0.1)
+
+.swat:hover
+  background-color: rgba(135, 135, 135, 0.5)
+
+.second-swat
+  float: right
+
+.boxes
+  width: 100%
+  background-color: $bc
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  position: relative
+  flex-direction: row
+  .first
+    margin-left: 20px
+  .belt
+    width: 100%
+    height: 100px
+    margin-top: 200px
+    display: table
+    .belt-text
+      display: table-cell
+      vertical-align: middle
+      width: 100%
+      background-color: rgba(3, 9, 76, 0.8)
+      text-align: center
+      font-size: 2.2em
+      letter-spacing: 0.1em
+      color: $topfont
+      
+.box
+  margin: 20px 20px 20px 0
+  background-color: $ic
+  height: 500px
+  flex-grow: 1
+  width: 0
+  &:hover
+    opacity: 0.5
+
+.secondBoxes .box
+  margin-top: 0
+
+.bottomBelt
+  width: 100%
+  height: 200px
+  min-width: 600px
+  background-color: pink
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  .column
+    margin: 10px 10px 10px 0
+    flex-grow: 2
+    background-color: red
+    min-width: 300px
+  .first
+    margin-left: 10px
+    max-width: 20%
+    min-width: 200px
+  .last
+    max-width: 20%
+    min-width: 200px
+  table
+    background-color: grey
+    width: 100%
+    .fir
+      background-color: blue
+  tr
+    background-color: pink
+    height: 30px
+  td
+    background-color: blue
+    height: 30px
+
+.finalBelt
+  width: 100%
+  height: auto
+  background-color: $bottomc
+  display: flex
+  flex-direction: row
+  text-align: center
+  color: white
+  padding-top: 10px
+  line-height: 20px
+  .text
+    text-align: center
+    width: 500px
+    margin: 0 auto
+    color: lightgrey
+    margin-top: 10px
+    font-size: 0.8em
+
+.experimentSection
+  margin-top: 10px
+  width: 100%
+  background-color: $bottomc
+  display: flex
+  color: $bottomfont
+  font-size: 0.9em
+  tr
+    background-color: $bottomc
+    height: 30px
+  .fir
+    background-color: $bottomc
+    text-align: right
+  .square
+    flex-grow: 1
+    background-color: $bottomc
+    overflow: hidden
+    white-space: nowrap
+  td
+    text-align: center
+    padding: 0 20px 0 20  px
+  hr
+    width: 75%
+    margin-top: 10px
+    margin-bottom: 10px
+  i
+    float: right
+    padding-left: 10px
+  table
+    margin: 0 auto
+.main-menu-container
+  display: block
+  ul
+    display: inline-block
+  li
+    display: inline-block
+    padding: 15px 20px 5px 20px
+    margin-bottom: 5px
+    transition: 0.25s ease-in-out
+    -moz-transition: 0.25s ease-in-out
+    -webkit-transition: 0.25s ease-in-out 
+    border-bottom-style: solid
+    border-bottom-color: $belt2
+    &:first-child
+      margin-left: 20px
+    &:hover
+      border-bottom-color: $belt2font
+      cursor: pointer
+    font-size: 0.9em  
+.belt2-image
+  width: 90%
+  height: 50px
+  margin: 5px 10px 5px 5px
+  background-color: $belt2
+.top-right-image
+  width: 90%
+  height: 30px
+  margin: 10px 10px 5px 5px
+  background-color: $ic
+.square-heading
+  text-align: center
+  margin-top: 10px
+  font-weight: bold
+.boxes-heading
+  color: $belt2font
+  padding-top: 25px
+  font-size: 2.5em
+  text-align: center
+.subpage
+  padding: 12px 0 0 0
+.second-boxes-heading
+  padding-top: 0px
+  padding-bottom: 20px
+.subpage-belt1
+  height: auto
+  margin-top: 10px 
+  .boxes
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    position: relative
+    flex-direction: row
+    align-items: flex-start
+  .box
+    height: auto
+    flex-grow: 1
+    width: 0
+    margin: 30px 60px 30px 0
+    background-color: transparent
+    &:first-child
+      margin-left: 60px
+  .boxText
+    color: $belt2font
+    font-size: 1.1em
+    text-align: center
+  .boxPicture
+    position: relative
+    height: 300px
+    background-image: url("/images/1.jpg")
+    background-size: cover
+    border-radius: 5px
+    overflow: hidden
+.examples
+  height: 200px
+  background-color: green
+  width: 100%
+  img
+    height: 200px
+input[type=text]
+  padding: 0 10px 0 10px
+.contact-us
+  background-color: $bottomc
+  width: 100%
+.form-container
+  width: 80%
+  max-width: 600px
+  margin: 0 auto
+  font-size: 0.9em
+  label
+    color: $topfont
+    text-align: left
+    width: 100%
+    font-size: 1.2em
+    padding-left: 10px 
+  textarea,  input[type=text]
+    margin: 0
+    border: solid
+    border-size: 6px
+    border-color: transparent
+    color: $belt2font
+    padding: 0 10px 0 10px
+    width: 100%
+    border-radius: 10px
+    height: 3rem
+    background-color: $topfont
+  input[type=text]
+    width: 100%
+  .sub-btn
+    margin: 0 auto
+    background-color: $bottomfont
+    &:hover
+      background-color: #e7e7e7
+  .sub-btn-holder
+    width: 100%
+    margin: 20px 0 20px 0 
+  .final
+    height: 10em
+.sub-bottom
+  background-color: $bottomc
+  .boxes-heading
+    color: $topfont
+/*# sourceMappingURL=style.css.map

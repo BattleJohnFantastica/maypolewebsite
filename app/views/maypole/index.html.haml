@@ -1,0 +1,114 @@
+%body
+  %header
+    %link{:href => "/slick/slick.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/slick/slick-theme.css", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    = stylesheet_link_tag "maypole"
+  %h1 Test#index
+  %p Find me in app/views/test/index.html.haml
+  .carolContainer
+    .responsive
+      %div
+        %img{:src => "/images/1.jpg"}
+      %div
+        %img{:src => "/images/2.jpg"}
+      %div
+        %img{:src => "/images/3.jpg"}
+      %div
+        %img{:src => "/images/4.jpg"}
+    .bar
+      %i.large.material-icons.mega.first-mega fast_rewind
+      %i.large.material-icons.mega.second-mega fast_forward
+    .slick-slider
+    .experimentSection
+      .square
+        .square-heading Social Media
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-facebook{"aria-hidden" => "true"}
+            %td Facebook
+          %tr
+            %td.fir
+              %i.fa.fa-twitter{"aria-hidden" => "true"}
+            %td Twitter
+          %tr
+            %td.fir
+              %i.fa.fa-google-plus{"aria-hidden" => "true"}
+            %td Google Plus
+          %tr
+            %td.fir
+              %i.fa.fa-ellipsis-h{"aria-hidden" => "true"}
+            %td Ello
+      .square
+        .square-heading Contact Us
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-check-square{"aria-hidden" => "true"}
+            %td Contact Form
+          %tr
+            %td.fir
+              %i.fa.fa-envelope-o{"aria-hidden" => "true"}
+            %td Email
+          %tr
+            %td.fir
+              %i.fa.fa-phone{"aria-hidden" => "true"}
+            %td Telephone (uk)
+          %tr
+            %td.fir
+              %i.fa.fa-phone-square{"aria-hidden" => "true"}
+            %td Telephone (global)
+      .square
+        .square-heading About Us
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-briefcase{"aria-hidden" => "true"}
+            %td Company
+          %tr
+            %td.fir
+              %i.fa.fa-map-marker{"aria-hidden" => "true"}
+            %td Location
+          %tr
+            %td.fir
+              %i.fa.fa-space-shuttle{"aria-hidden" => "true"}
+            %td The Director
+          %tr
+            %td.fir
+              %i.fa.fa-history{"aria-hidden" => "true"}
+            %td Terms and Conditions
+      .square
+        .square-heading Our Sites
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-film{"aria-hidden" => "true"}
+            %td Film
+          %tr
+            %td.fir
+              %i.fa.fa-database{"aria-hidden" => "true"}
+            %td Data Collect
+          %tr
+            %td.fir
+              %i.fa.fa-facebook-square{"aria-hidden" => "true"}
+            %td Facebook Page
+          %tr
+            %td.fir
+              %i.fa.fa-rss{"aria-hidden" => "true"}
+            %td Blog
+    .finalBelt
+      .text
+        %b Company Name: Maypole Film Limited
+        = succeed "Maypole Film is a British Company, based in the center of the country, Worcestershire - by the West Midlands area. It was started with the help of The University of Birmingham's business start up programme." do
+          %br/
+%script{:src => "//code.jquery.com/jquery-1.11.0.min.js", :type => "text/javascript"}
+%script{:src => "//code.jquery.com/jquery-migrate-1.2.1.min.js", :type => "text/javascript"}
+= javascript_include_tag "application"
+%script{:src => "/slick/slick.min.js", :type => "text/javascript"}
+
+
