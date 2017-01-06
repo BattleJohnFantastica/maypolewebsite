@@ -1,5 +1,6 @@
-.form-container
-  = form_for :maypole do |f|
+#from.form-container
+  = render 'shared/error_messages'
+  = form_for @article, url: {action: "create", anchor: "from" } do |f|
     %p.form-group
       = f.label :name
       %br/

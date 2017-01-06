@@ -7,10 +7,14 @@ class MaypoleController < ApplicationController
     render subpath
   end
   def subpage
+    @article = Maypole.new
   end
   def create
     @article = Maypole.new(params.require(:maypole).permit(:name, :email, :message))
-    @article.save
-    redirect_to "/subpage"
+    if @article.save
+      redirect_to '/'
+    else
+      render 'subpage'
+    end
   end
 end
