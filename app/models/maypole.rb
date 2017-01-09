@@ -12,3 +12,9 @@ class Maypole < ApplicationRecord
   validates :email, presence: true, length: { maximum: 50 }, email: true
   validates :message, presence: true, length: { maximum: 1000 }
 end
+
+class Page < ApplicationRecord
+  validates :title, presence: true
+  validates :photo_main, presence: true
+  validates :text_main, presence: true
+end

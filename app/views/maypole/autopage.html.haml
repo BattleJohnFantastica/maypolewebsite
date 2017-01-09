@@ -1,0 +1,28 @@
+%html
+  -photo1 = "hello"
+  = render "header"
+  %body
+    = render "top"
+    .subpage-belt1
+      .boxes-heading.subpage
+        = @u.title
+      .boxes
+        .box 
+          .boxPicture{:style => @style}
+        .box
+          .boxText
+            = @u.text_main
+    .examples
+      .examples-slick
+        %div
+          %img{:src => "/images/1.jpg"}
+        %div 
+          %img{:src => "/images/2.jpg"}
+        %div 
+          %img{:src => "/images/3.jpg"}
+    .sub-bottom
+      .contact-us
+        .boxes-heading.subpage Contact Us
+        = render "contactusform"
+      = render "bottom"
+= render "footer"
