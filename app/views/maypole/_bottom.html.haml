@@ -48,7 +48,7 @@
           %td.fir
             %i.fa.fa-briefcase{"aria-hidden" => "true"}
           %td
-            = link_to "Backstory", p_path(:page => "Hello! And welcome to the first autopage")
+            = link_to "Backstory", p_path(:page => "1")
         %tr
           %td.fir
             %i.fa.fa-map-marker{"aria-hidden" => "true"}
@@ -56,7 +56,8 @@
         %tr
           %td.fir
             %i.fa.fa-space-shuttle{"aria-hidden" => "true"}
-          %td The Director
+          %td
+            = link_to "The Director", p_path(:page => "2")
         %tr
           %td.fir
             %i.fa.fa-history{"aria-hidden" => "true"}
@@ -68,7 +69,8 @@
         %tr
           %td.fir
             %i.fa.fa-film{"aria-hidden" => "true"}
-          %td Film
+          %td
+            = link_to "Film", v_path(:page => "1")
         %tr
           %td.fir
             %i.fa.fa-database{"aria-hidden" => "true"}

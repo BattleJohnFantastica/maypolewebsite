@@ -1,0 +1,2 @@
+class Pagevideo < ApplicationRecord
+end

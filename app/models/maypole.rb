@@ -18,3 +18,6 @@ class Page < ApplicationRecord
   validates :photo_main, presence: true
   validates :text_main, presence: true
 end
+
+class Pagevideo < ApplicationRecord
+end

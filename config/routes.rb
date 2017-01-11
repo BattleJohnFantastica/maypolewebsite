@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/subpage', :to => 'maypole#create'
   get '/new', :to => 'maypole#new'
   get '/p', :to => 'maypole#autopage'
+  get '/v', :to => 'maypole#autopage_video'
 end
 
 

@@ -12,7 +12,13 @@ class MaypoleController < ApplicationController
   def autopage
     @article = Maypole.new
     @car = params[:page]
-    @u = Page.find(1)
+    @u = Page.find(@car)
+    @style = "background-image:url(\"" + @u.photo_main + "\")"
+  end
+  def autopage_video
+    @article = Maypole.new
+    @car = params[:page]
+    @u = Pagevideo.find(@car)
     @style = "background-image:url(\"" + @u.photo_main + "\")"
   end
   def create
