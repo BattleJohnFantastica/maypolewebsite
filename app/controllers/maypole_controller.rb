@@ -1,4 +1,13 @@
 class MaypoleController < ApplicationController
+  class Visual
+    attr_reader :picture, :link, :name
+    def initialize(name)
+      @vid = Video.where(:name => name).first
+      @name =name
+      @picture = @vid.photo
+      @link = @vid.link
+    end
+  end
   def index
   end
   def landingpage
@@ -17,9 +26,9 @@ class MaypoleController < ApplicationController
   end
   def autopage_video
     @article = Maypole.new
-    @car = params[:page]
-    @u = Pagevideo.find(@car)
-    @style = "background-image:url(\"" + @u.photo_main + "\")"
+    @page_id = params[:page]
+    @page_info = Pagevideo.find(@page_id)
+    @top = Visual.new(@page_info.photo_main)
   end
   def create
     @article = Maypole.new(params.require(:maypole).permit(:name, :email, :message))

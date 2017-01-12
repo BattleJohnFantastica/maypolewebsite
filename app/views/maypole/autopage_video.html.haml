@@ -2,17 +2,22 @@
   -photo1 = "hello"
   = render "header"
   %body
-    .videoBox
+    .cover
+      .close-button
+      .videoBox
+        %iframe#ifram.iframeOne{:allowscriptaccess => "always", :frameborder => "0"}
     = render "top"
     .subpage-belt1
       .boxes-heading.subpage
-        = @u.title
+        = @page_info.title
       .boxes
         .box 
-          .boxPicture{:style => @style}
+          .boxPicture{:style => "background-image:url(#{@top.picture})", :href => "#{@top.link}"}
         .box
           .boxText
-            = simple_format(@u.text_main)
+            = simple_format(@page_info.text_main)
+            = @pict
+            = @url
     .examples
       .examples-slick
         %div
