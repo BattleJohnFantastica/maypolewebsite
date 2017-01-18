@@ -11,21 +11,32 @@
       .boxes-heading.subpage
         = @page_info.title
       .boxes
-        .box 
-          .boxPicture{:style => "background-image:url(#{@top.picture})", :href => "#{@top.link}"}
+        .box
+          %iframe.iframeTwo{:allowfullscreen => "", :frameborder => "0", :src => "#{@top.link}"}
         .box
           .boxText
             = simple_format(@page_info.text_main)
-            = @pict
-            = @url
     .examples
+      .button-overlay
+        .button-holder
+          %button.btn.btn-primary.boxVideo{:type => "button", :href => "#{@set.first.link}"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label Watch
+        .button-holder
+          %button.btn.btn-primary.boxVideo{:type => "button", :href => "#{@set.second.link}"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label Watch
+        .button-holder
+          %button.btn.btn-primary.boxVideo{:type => "button", :href => "#{@set.third.link}"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label Watch
       .examples-slick
         %div
-          %img{:src => "/images/1.jpg"}
+          %img{:src => "#{@set.first.picture}", :href => "@{@set.first.link}"}
         %div 
-          %img{:src => "/images/2.jpg"}
+          %img{:src => "#{@set.second.picture}", :href => "@{@set.second.link}"}
         %div 
-          %img{:src => "/images/3.jpg"}
+          %img{:src => "#{@set.third.picture}", :href => "@{@set.third.link}"}
     .sub-bottom
       .contact-us
         .boxes-heading.subpage Contact Us

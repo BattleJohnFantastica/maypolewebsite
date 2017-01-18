@@ -29,7 +29,7 @@ function boxResize() {
    boxResize();
    });
    
-$(".boxPicture").click(function() {
+$(".boxVideo").click(function() {
   var href = $(this).attr('href');
   $(".iframeOne").attr("src", href);
   $(".cover").css("display", "inherit");
