@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :maypoles
+resources :pages
+resources :pagevideos
+resources :sub_pages
+resources :subpages
+resources :videos
+
+    root to: "maypoles#index"
+  end
+
   resources :maypole do
     resources :page
   end

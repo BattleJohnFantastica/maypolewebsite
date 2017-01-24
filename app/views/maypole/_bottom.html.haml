@@ -52,7 +52,8 @@
         %tr
           %td.fir
             %i.fa.fa-map-marker{"aria-hidden" => "true"}
-          %td Location
+          %td
+            = link_to "Location", p_path(:page => "3")
         %tr
           %td.fir
             %i.fa.fa-space-shuttle{"aria-hidden" => "true"}
@@ -61,7 +62,8 @@
         %tr
           %td.fir
             %i.fa.fa-history{"aria-hidden" => "true"}
-          %td Terms and Conditions
+          %td
+            = link_to "Terms and Conditions", p_path(:page => "4")
     .square
       .square-heading Our Sites
       %hr/

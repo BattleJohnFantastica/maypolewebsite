@@ -6,20 +6,28 @@
     .subpage-belt1
       .boxes-heading.subpage
         = @u.title
-      .boxes
-        .box 
-          .boxPicture{:style => @style}
-        .box
-          .boxText
-            = simple_format(@u.text_main)
+      = render @box
     .examples
+      .button-overlay
+        .button-holder
+          %button.btn.btn-primary.boxPicture{:type => "button", :href => "/p?page=#{@u.photo_sub_1_link}"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label #{@subPageTitle.first}
+        .button-holder
+          %button.btn.btn-primary.boxPicture{:type => "button", :href => "/p?page=#{@u.photo_sub_2_link}"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label #{@subPageTitle.second}
+        .button-holder
+          %button.btn.btn-primary.boxPicture{:type => "button", :href => "/p?page=#{@u.photo_sub_3_link}"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label #{@subPageTitle.third}
       .examples-slick
         %div
-          %img{:src => "/images/1.jpg"}
+          = link_to(image_tag("#{@u.photo_sub_1}"), p_path(:page => "#{@u.photo_sub_1_link}"), class: ".testClass")
         %div 
-          %img{:src => "/images/2.jpg"}
+          = link_to(image_tag("#{@u.photo_sub_1}"), p_path(:page => "#{@u.photo_sub_2_link}"), class: ".testClass")
         %div 
-          %img{:src => "/images/3.jpg"}
+          = link_to(image_tag("#{@u.photo_sub_1}"), p_path(:page => "#{@u.photo_sub_3_link}"), class: ".testClass")
     .sub-bottom
       .contact-us
         .boxes-heading.subpage Contact Us

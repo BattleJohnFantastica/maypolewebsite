@@ -43,5 +43,15 @@ $('.examples-slick').slick({
   slidesToScroll: 3
 });
 		
+$('.box').click(function(){
+  var href = $(this).attr('href');
+  window.location.replace(href);
+});
+
+$('.boxPicture').click(function(){
+  var href = $(this).attr('href');
+  window.location.replace(href);
+});
+
 });
 

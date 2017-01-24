@@ -17,6 +17,17 @@ class MaypoleController < ApplicationController
       @third = Visual.new(set[2])
     end
   end
+  class MegaLinks
+    attr_reader :first, :second, :third
+    def initialize(set)
+      @sub1 =  set.photo_sub_1_link
+      @first = Subpage.where(:photo_link => @sub1).first.photo_title
+      @sub2 =  set.photo_sub_2_link
+      @second = Subpage.where(:photo_link => @sub2).first.photo_title
+      @sub3 =  set.photo_sub_3_link
+      @third = Subpage.where(:photo_link => @sub3).first.photo_title
+    end
+  end
   def index
   end
   def landingpage
@@ -31,6 +42,12 @@ class MaypoleController < ApplicationController
     @article = Maypole.new
     @car = params[:page]
     @u = Page.find(@car)
+    @subPageTitle = MegaLinks.new(@u)
+    if @u.photo_main == "NONE"
+      @box = "box"
+    else
+      @box = "boxes"
+    end
     @style = "background-image:url(\"" + @u.photo_main + "\")"
   end
   def autopage_video
