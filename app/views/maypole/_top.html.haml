@@ -8,7 +8,7 @@
         #custom-search-input
           .input-group.col-md-12
             %input.form-control.input-lg{:placeholder => "Search Maypole Web", :type => "text"}/
-            %span.input-group-btn
+            %span.input-group-btn.glass
               %button.btn.btn-info.btn-lg{:type => "button"}
                 %i.glyphicon.glyphicon-search
     .belt-cell.third
@@ -17,11 +17,11 @@
     .belt-cell.second
       .main-menu-container
         %ui
-          %li Contact Us
-          %li Videos
-          %li Websites
-          %li About Us
-          %li T &amp; C
-          %li Reviews
+          %li.tL{:href => "/p?page=6"} Contact Us
+          %li.tL{:href => "/v?page=1"} Videos
+          %li.tL{:href => "/p?page=7"} Websites
+          %li.tL{:href => "/p?page=1"} About Us
+          %li.tL{:href => "/p?page=4"} T &amp; C
+          %li.tL{:href => "/p?page=8"} Reviews
     .belt-cell.third
       .belt2-image

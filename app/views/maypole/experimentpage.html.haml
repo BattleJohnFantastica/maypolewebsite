@@ -1,0 +1,18 @@
+= render "header"
+%html
+  %body
+    = render "top"
+    .carolContainer
+      .responsive
+        %div
+          %img.boxPicture{:src => "/images/1.jpg", :href => "/p?page=5"}
+        %div
+          %img.boxPicture{:src => "/images/2.jpg"}
+        %div
+          %img.boxPicture{:src => "/images/3.jpg"}
+        %div
+          %img.boxPicture{:src => "/images/4.jpg"}
+      %i.large.material-icons.mega.first-mega fast_rewind
+      %i.large.material-icons.mega.second-mega fast_forward
+      .slick-slider
+  = render "footer"

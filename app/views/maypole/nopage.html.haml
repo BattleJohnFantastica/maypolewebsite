@@ -1,0 +1,36 @@
+%html
+  -photo1 = "hello"
+  = render "header"
+  %body
+    = render "top"
+    .subpage-belt1
+      .boxes-heading.subpage
+        Whoops!
+      = render "box2"
+    .examples
+      .button-overlay
+        .button-holder
+          %button.btn.btn-primary.boxPicture{:type => "button", :href => "/p?page=2"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label Title 1
+        .button-holder
+          %button.btn.btn-primary.boxPicture{:type => "button", :href => "/p?page=2"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label Title 2
+        .button-holder
+          %button.btn.btn-primary.boxPicture{:type => "button", :href => "/p?page=2"} 
+            %span.glyphicon.glyphicon-play{"aria-hidden" => "true"}
+            %span.button-label Title 3
+      .examples-slick
+        %div
+          = link_to(image_tag("/images/1.jpg"), p_path(:page => "2"), class: ".testClass")
+        %div 
+          = link_to(image_tag("/images/1.jpg"), p_path(:page => "2"), class: ".testClass")
+        %div 
+          = link_to(image_tag("/images/1.jpg"), p_path(:page => "2"), class: ".testClass")
+    .sub-bottom
+      .contact-us
+        .boxes-heading.subpage Contact Us
+        = render "contactusform"
+      = render "bottom"
+= render "footer"

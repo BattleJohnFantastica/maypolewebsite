@@ -27,19 +27,23 @@
         %tr
           %td.fir
             %i.fa.fa-check-square{"aria-hidden" => "true"}
-          %td Contact Form
+          %td
+            = link_to "Contact Form", p_path(:page => "6")
         %tr
           %td.fir
             %i.fa.fa-envelope-o{"aria-hidden" => "true"}
-          %td Email
+          %td
+            = link_to "Email Address", p_path(:page => "6")
         %tr
           %td.fir
             %i.fa.fa-phone{"aria-hidden" => "true"}
-          %td Telephone (uk)
+          %td
+            = link_to "Telephone (UK)", p_path(:page => "6")
         %tr
           %td.fir
             %i.fa.fa-phone-square{"aria-hidden" => "true"}
-          %td Telephone (global)
+          %td 
+            = link_to "Telephone (Global)", p_path(:page => "6")
     .square
       .square-heading About Us
       %hr/

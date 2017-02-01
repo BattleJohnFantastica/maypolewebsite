@@ -28,9 +28,27 @@ class MaypoleController < ApplicationController
       @third = Subpage.where(:photo_link => @sub3).first.photo_title
     end
   end
+  before_filter :javascriptDatabase
+  def javascriptDatabase
+    @dat =  ["John", "Johnathon", "Jake", "Harry", "Harold"]
+    @dat2 =  [{ num: 'one' }, { num: 'two' }]
+    @dat3 = @dat.collect{ |item| {"num" => item} }
+    @dat4 = Page.select(:title).map(&:title) + Pagevideo.select(:title).map(&:title)
+    @dat5 = @dat4.collect{ |item| {"num" => item} }
+    @dat6 = Pagevideo.select(:title)
+    @dat7 = Pagevideo.select("id", "title").map{|x| ["v?page=" + x.id.to_s, x.title]}
+    @data = @dat5.to_json
+    @data3 = Page.select("id", "title").map{|x| [x.id, x.title]}
+    @data2 = Page.select("id", "title").map{|x| ["p?page=" + x.id.to_s, x.title]} + Pagevideo.select("id", "title").map{|x| ["/v?page=" + x.id.to_s, x.title]}
+  end
   def index
   end
   def landingpage
+  end
+  def nopage
+    @article = Maypole.new
+  end
+  def experimentpage
   end
   def argle
     render subpath

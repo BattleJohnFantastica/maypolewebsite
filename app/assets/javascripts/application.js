@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require twitter/typeahead
+
+//= require twitter/typeahead.min
 
 
 $(document).ready(function(){
@@ -43,14 +46,79 @@ $('.examples-slick').slick({
   slidesToScroll: 3
 });
 		
-$('.box').click(function(){
+$('.boxMain').click(function(){
   var href = $(this).attr('href');
   window.location.replace(href);
 });
 
 $('.boxPicture').click(function(){
   var href = $(this).attr('href');
-  window.location.replace(href);
+  if(href){
+    window.location.replace(href);
+  }
+});
+
+$('.tL').click(function(){
+  var href = $(this).attr('href');
+  if(href){
+    window.location.replace(href);
+  }
+});
+
+var numbers = new Bloodhound({
+  datumTokenizer: Bloodhound.tokenizers.obj.whitespace('num'),
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  local: data
+});
+
+// initialize the bloodhound suggestion engine
+numbers.initialize();
+
+// instantiate the typeahead UI
+$('.input-lg').typeahead({
+  autocomplete: true
+},
+{
+  displayKey: 'num',
+  source: numbers.ttAdapter()
+});
+
+// $('.input-lg').typeahead(null, {
+  // displayKey: 'num',
+  // autoselect: true,
+  // source: numbers.ttAdapter()
+// });
+
+
+function pageSearch(e){
+    if (e.which == 13) {
+    // $('.tt-selectable').first().click();
+    var inputVal = $(".tt-input").val();
+    var dic = {};
+    data2.forEach(function(val){dic[val[1]] = val[0];});
+    console.log("Data 2 "  + data2 + dic[inputVal]);
+    var a = data2[1];
+    if(dic[inputVal]){
+    window.location.replace(dic[inputVal]);
+    } else {
+    window.location.replace("nopage");
+    }
+  }
+}
+
+// function page(e){
+    // if (e.which == 13) {
+      // var suggestion = $( "" ).text();
+      // if(suggestion){
+        
+      // } else {
+        
+      // }
+  // }
+// }
+
+$('.tt-input').keypress(function (e) {
+  pageSearch(e);
 });
 
 });

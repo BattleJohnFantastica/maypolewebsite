@@ -1,52 +1,52 @@
+= render "header"
 %html
-  = render "header"
   %body
     = render "top"
     .carolContainer
       .responsive
         %div
-          %img{:src => "/images/1.jpg"}
+          %img.boxPicture{:src => "/images/1.jpg", :href => "/p?page=5"}
         %div
-          %img{:src => "/images/2.jpg"}
+          %img.boxPicture{:src => "/images/2.jpg"}
         %div
-          %img{:src => "/images/3.jpg"}
+          %img.boxPicture{:src => "/images/3.jpg"}
         %div
-          %img{:src => "/images/4.jpg"}
-      .bar
-        %i.large.material-icons.mega.first-mega fast_rewind
-        %i.large.material-icons.mega.second-mega fast_forward
+          %img.boxPicture{:src => "/images/4.jpg"}
+      %i.large.material-icons.mega.first-mega fast_rewind
+      %i.large.material-icons.mega.second-mega fast_forward
       .slick-slider
-    .boxes-heading Looking Towards Getting A Website?
+    .boxes-heading Looking Towards Getting A Video?
     .boxes{:style => "margin-top: 5px"}   
-      .box.first{:style => "background-image: url(/assets/1.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain.first{:style => "background-image: url(/assets/1.jpg); background-size: cover;", :href => "/v?page=2"}
         .belt
           .belt-text{:href => "/p?page=1"} LIVE ACTION
-      .box{:style => "background-image: url(/assets/2.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain{:style => "background-image: url(/assets/2.jpg); background-size: cover;", :href => "/v?page=3"}
         .belt
           .belt-text ANIMATED
-      .box{:style => "background-image: url(/assets/3.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain{:style => "background-image: url(/assets/3.jpg); background-size: cover;", :href => "/v?page=4"}
         .belt
           .belt-text OTHER VIDEO
     .boxes-heading.second-boxes-heading Looking Towards Getting A Video?
     .boxes.secondBoxes
-      .box.first{:style => "background-image: url(/assets/4.jpg); background-size: cover;", :href => "/p?page=5"}
+      %div #{@universal}
+      .box.boxMain.first{:style => "background-image: url(/assets/4.jpg); background-size: cover;", :href => "/p?page=5"}
         .belt
           .belt-text PROFESSIONAL WEBSITES
-      .box{:style => "background-image: url(/assets/1.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain{:style => "background-image: url(/assets/1.jpg); background-size: cover;", :href => "/p?page=11"}
         .belt
           .belt-text ONLINE MARKETPLACE
-      .box{:style => "background-image: url(/assets/2.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain{:style => "background-image: url(/assets/2.jpg); background-size: cover;", :href => "/p?page=12"}
         .belt
           .belt-text OTHER WEBSITES
     .boxes-heading.second-boxes-heading Special Projects
     .boxes.secondBoxes
-      .box.first{:style => "background-image: url(/assets/4.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain.first{:style => "background-image: url(/assets/4.jpg); background-size: cover;", :href => "/p?page=5"}
         .belt
           .belt-text START-UP PACKAGE
-      .box{:style => "background-image: url(/assets/1.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain{:style => "background-image: url(/assets/1.jpg); background-size: cover;", :href => "/p?page=5"}
         .belt
           .belt-text SMALL BUSINESS
-      .box{:style => "background-image: url(/assets/2.jpg); background-size: cover;", :href => "/p?page=5"}
+      .box.boxMain{:style => "background-image: url(/assets/2.jpg); background-size: cover;", :href => "/p?page=5"}
         .belt
           .belt-text LARGE BUSINESS
     = render "bottom"
