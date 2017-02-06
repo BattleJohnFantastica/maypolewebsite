@@ -14,9 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require twitter/typeahead
 
-//= require twitter/typeahead.min
+
 
 
 $(document).ready(function(){
@@ -29,6 +28,11 @@ $('.responsive').slick({
   arrows: false
   
 });
+
+
+
+if($(".tt-hint").text)
+console.log($(".tt-hint").text);
   
 $('.second-mega').click(function(){
     $(".responsive").slick('slickNext');
@@ -90,35 +94,57 @@ $('.input-lg').typeahead({
 // });
 
 
-function pageSearch(e){
-    if (e.which == 13) {
-    // $('.tt-selectable').first().click();
-    var inputVal = $(".tt-input").val();
-    var dic = {};
-    data2.forEach(function(val){dic[val[1]] = val[0];});
-    console.log("Data 2 "  + data2 + dic[inputVal]);
-    var a = data2[1];
-    if(dic[inputVal]){
-    window.location.replace(dic[inputVal]);
-    } else {
-    window.location.replace("nopage");
-    }
-  }
-}
-
-// function page(e){
+// function pageSearch(e){
     // if (e.which == 13) {
-      // var suggestion = $( "" ).text();
-      // if(suggestion){
-        
-      // } else {
-        
-      // }
+    // // // $('.tt-selectable').first().click();
+    // // var inputVal = $(".tt-input").val();
+    // // var dic = {};
+    // // data2.forEach(function(val){dic[val[1]] = val[0];});
+    // // console.log("Data 2 "  + data2 + dic[inputVal]);
+    // // var a = data2[1];
+    // // if(dic[inputVal]){
+    // // window.location.replace(dic[inputVal]);
+    // // } else {
+    // // window.location.replace("nopage");
+    // // }
+    // console.log(glob);
   // }
 // }
 
+if ( ! Modernizr.objectfit ) {
+  $('.slick-slide').each(function () {
+    var $container = $(this),
+        imgUrl = $container.find('img').prop('src');
+    if (imgUrl) {
+      $container.find('img').remove();
+      $container
+        .css('backgroundImage', 'url(' + imgUrl + ')')
+        .addClass('compat-object-fit');
+    }  
+  });
+}
+
+var dic = {};
+data2.forEach(function(val){dic[val[1].toLowerCase()] = val[0];});
+function page(e){
+    if (e.which == 13) {
+      var inputVal = glob.toLowerCase()
+      if(glob !== "") {
+        window.location.replace(dic[inputVal]); 
+      } else {
+        var inputVal2 = $(".tt-input").val().toLowerCase();
+        if(dic[inputVal2]){
+          window.location.replace(dic[inputVal2]);
+        } else {
+          window.location.replace("nopage");
+        }
+        
+      }
+  }
+}
+
 $('.tt-input').keypress(function (e) {
-  pageSearch(e);
+  page(e);
 });
 
 });
