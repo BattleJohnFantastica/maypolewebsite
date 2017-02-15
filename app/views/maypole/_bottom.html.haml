@@ -1,94 +1,95 @@
 %html
-  .experimentSection
-    .square
-      .square-heading Social Media
-      %hr/
-      %table
-        %tr
-          %td.fir
-            %i.fa.fa-facebook{"aria-hidden" => "true"}
-          %td Facebook
-        %tr
-          %td.fir
-            %i.fa.fa-twitter{"aria-hidden" => "true"}
-          %td Twitter
-        %tr
-          %td.fir
-            %i.fa.fa-google-plus{"aria-hidden" => "true"}
-          %td Google Plus
-        %tr
-          %td.fir
-            %i.fa.fa-ellipsis-h{"aria-hidden" => "true"}
-          %td Ello
-    .square
-      .square-heading Contact Us
-      %hr/
-      %table
-        %tr
-          %td.fir
-            %i.fa.fa-check-square{"aria-hidden" => "true"}
-          %td
-            = link_to "Contact Form", p_path(:page => "6")
-        %tr
-          %td.fir
-            %i.fa.fa-envelope-o{"aria-hidden" => "true"}
-          %td
-            = link_to "Email Address", p_path(:page => "6")
-        %tr
-          %td.fir
-            %i.fa.fa-phone{"aria-hidden" => "true"}
-          %td
-            = link_to "Telephone (UK)", p_path(:page => "6")
-        %tr
-          %td.fir
-            %i.fa.fa-phone-square{"aria-hidden" => "true"}
-          %td 
-            = link_to "Telephone (Global)", p_path(:page => "6")
-    .square
-      .square-heading About Us
-      %hr/
-      %table
-        %tr
-          %td.fir
-            %i.fa.fa-briefcase{"aria-hidden" => "true"}
-          %td
-            = link_to "Backstory", p_path(:page => "1")
-        %tr
-          %td.fir
-            %i.fa.fa-map-marker{"aria-hidden" => "true"}
-          %td
-            = link_to "Location", p_path(:page => "3")
-        %tr
-          %td.fir
-            %i.fa.fa-space-shuttle{"aria-hidden" => "true"}
-          %td
-            = link_to "The Director", p_path(:page => "2")
-        %tr
-          %td.fir
-            %i.fa.fa-history{"aria-hidden" => "true"}
-          %td
-            = link_to "Terms and Conditions", p_path(:page => "4")
-    .square
-      .square-heading Our Sites
-      %hr/
-      %table
-        %tr
-          %td.fir
-            %i.fa.fa-film{"aria-hidden" => "true"}
-          %td
-            = link_to "Film", v_path(:page => "1")
-        %tr
-          %td.fir
-            %i.fa.fa-database{"aria-hidden" => "true"}
-          %td Data Collect
-        %tr
-          %td.fir
-            %i.fa.fa-facebook-square{"aria-hidden" => "true"}
-          %td Facebook Page
-        %tr
-          %td.fir
-            %i.fa.fa-rss{"aria-hidden" => "true"}
-          %td Blog
+  .experiment-holder
+    .experimentSection
+      .square
+        .square-heading Social Media
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-facebook{"aria-hidden" => "true"}
+            %td Facebook
+          %tr
+            %td.fir
+              %i.fa.fa-twitter{"aria-hidden" => "true"}
+            %td Twitter
+          %tr
+            %td.fir
+              %i.fa.fa-google-plus{"aria-hidden" => "true"}
+            %td Google Plus
+          %tr
+            %td.fir
+              %i.fa.fa-ellipsis-h{"aria-hidden" => "true"}
+            %td Ello
+      .square
+        .square-heading Contact Us
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-check-square{"aria-hidden" => "true"}
+            %td
+              = link_to "Contact Form", p_path(:page => "6")
+          %tr
+            %td.fir
+              %i.fa.fa-envelope-o{"aria-hidden" => "true"}
+            %td
+              = link_to "Email Address", p_path(:page => "6")
+          %tr
+            %td.fir
+              %i.fa.fa-phone{"aria-hidden" => "true"}
+            %td
+              = link_to "Telephone (UK)", p_path(:page => "6")
+          %tr
+            %td.fir
+              %i.fa.fa-phone-square{"aria-hidden" => "true"}
+            %td 
+              = link_to "Telephone (Global)", p_path(:page => "6")
+      .square
+        .square-heading About Us
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-briefcase{"aria-hidden" => "true"}
+            %td
+              = link_to "Backstory", p_path(:page => "1")
+          %tr
+            %td.fir
+              %i.fa.fa-map-marker{"aria-hidden" => "true"}
+            %td
+              = link_to "Location", p_path(:page => "3")
+          %tr
+            %td.fir
+              %i.fa.fa-space-shuttle{"aria-hidden" => "true"}
+            %td
+              = link_to "The Director", p_path(:page => "2")
+          %tr
+            %td.fir
+              %i.fa.fa-history{"aria-hidden" => "true"}
+            %td
+              = link_to "Terms and Conditions", p_path(:page => "4")
+      .square
+        .square-heading Our Sites
+        %hr/
+        %table
+          %tr
+            %td.fir
+              %i.fa.fa-film{"aria-hidden" => "true"}
+            %td
+              = link_to "Film", v_path(:page => "1")
+          %tr
+            %td.fir
+              %i.fa.fa-database{"aria-hidden" => "true"}
+            %td Data Collect
+          %tr
+            %td.fir
+              %i.fa.fa-facebook-square{"aria-hidden" => "true"}
+            %td Facebook Page
+          %tr
+            %td.fir
+              %i.fa.fa-rss{"aria-hidden" => "true"}
+            %td Blog
   .finalBelt
     .text
       %b Company Name: Maypole Film Limited

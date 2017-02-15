@@ -5,7 +5,7 @@
     background-color: #fff;
     height: 25px;
     margin-top: 17px;
-    width: 145%;
+    width: 100%;
     font-size: 1em
 }
 
@@ -43,10 +43,10 @@
     font-size: 1em
 }
 
-.container {
+.search-container {
     margin-right: 0;
     margin-left: 0;
-    width: 70%;
+    width: 100%;
   
 }
 
